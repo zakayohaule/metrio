@@ -7,7 +7,7 @@ import Components from 'unplugin-vue-components/vite'
 import DefineOptions from 'unplugin-vue-define-options/vite'
 import { defineConfig } from 'vite'
 import vuetify from 'vite-plugin-vuetify'
-import sass from 'sass'
+import sassPlugin from 'vite-plugin-sass';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -34,6 +34,7 @@ export default defineConfig({
       vueTemplate: true,
     }),
     DefineOptions(),
+    // sassPlugin(),
   ],
   define: { 'process.env': {} },
   resolve: {

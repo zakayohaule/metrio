@@ -31,3 +31,4 @@ tests
 .env
 # iconify dist files
 resources/js/@iconify/*.js
+/vendor/

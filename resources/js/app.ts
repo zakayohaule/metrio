@@ -12,6 +12,7 @@ loadFonts()
 createInertiaApp({
   resolve: name => {
     const pages = import.meta.glob('./Pages/**/*.vue', { eager: true })
+    console.log(pages);
     const page = pages[`./Pages/${name}.vue`]
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -25,7 +26,6 @@ createInertiaApp({
       .use(plugin)
       .use(vuetify)
       .use(createPinia)
-      .component('Layout', AppLayout)
       .mount(el)
   },
 })
